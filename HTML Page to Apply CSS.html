@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CSS magic</title>
+
+	<style>
+		p,div,span {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;} 
+        h2 {color:red;} 
+        div h1 {text-align: center;}
+		ul {list-style: none;} 
+		#linksbar li a{text-decoration: none;color: red;background-color: pink} 
+		#linksbar li a:hover{color:pink;background-color: red;}
+		#content h2+p{font-weight: bold;font-size: 12px;}
+		#loginform {border: 2px rgb(20, 70, 60) dashed;}
+		input[type="text"] {background-color: yellow;}
+		input[type="text"]:focus {background-color: white;}
+		#titles * {background-color: yellow; border: 1px solid black;display: inline;padding: 5px;}
+		#aboutus{color: red !important;} 
+		#content #aboutus{color: yellow;}
+
+
+
+
+	</style>
+	
+</head>
+
+
+<body>
+	
+		
+	<div id="header" style="background-color: red;width: 100%;height: 30%;">
+		<h1>This is the page header</h1>
+	</div>
+	<span id="linksbar" style="width:25%;height:70% ;background-color: gray;float: left;">
+		<div id="loginform" >
+			User name: <input type="text"/>
+			</br>
+			Password: <input type="password"/>
+			<br/>
+			<input type="checkbox" /> remember me
+			<br/>
+			<button>login</button>
+		</div>
+		<h2> site menu</h2>
+		<ul class="=none-bullet-list">
+			<li><a href="#">link1</a></li>
+			<li><a href="#">link2</a></li>
+			<li><a href="#">link3</a></li>
+			<li><a href="#">link4</a></li>
+			<li><a href="#">link5</a></li>
+		</ul>
+	</span>
+	<span id="content" style="width: 75%;height: 70%;background-color: pink;float: left;">
+		<h2> about us</h2>
+		<p id="aboutus">
+			This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph.
+		</p>
+		
+		<div id="titles">
+		<p> title1</p>
+			<p> title2</p>
+			<p> title3</p>
+			
+		</div>
+
+	</span>
+	<p style="margin-top: 500px;"> solution ?
+	1- Try to change the <p> tags inside the div with id "titles" to spans, is there any difference ? NOOOOOO </p>
+	<p> Make an internal style that makes font color red for the <p> with id "aboutus", and another internal style that makes the color yellow for the <p> with id "aboutus" that's direct child from span with id "content". Which style will be applied to the paragraph? And why ?<br> yellow because of spicificty</p>
+	<p> Use !important with the first style of the previous 2 styles. What's the change that happened and why? <br> p change to red because of important</p> <br>
+	<p> bonus</p>
+	<p>< style 1 = 100 and style 2 =200 </p>
+
+
+</body>
+</html>
